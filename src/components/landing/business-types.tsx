@@ -131,7 +131,7 @@ export const BusinessTypes = ({
   };
 
   return (
-    <section className="py-24 bg-[#f6f9fc] overflow-hidden">
+    <section id="marketplace-types" className="py-24 bg-[#f6f9fc] overflow-hidden scroll-mt-20">
       <div className="max-w-[1200px] mx-auto px-6 mb-12">
         <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
           <div className="max-w-2xl">

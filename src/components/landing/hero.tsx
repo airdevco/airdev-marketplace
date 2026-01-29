@@ -20,6 +20,7 @@ interface HeroProps {
   showImages?: boolean;
   showButton?: boolean;
   buttonText?: string;
+  buttonLink?: string;
   titleMaxWidth?: string;
   alignLeft?: boolean;
   rightImage?: string;
@@ -36,6 +37,7 @@ export const Hero = ({
   showImages = true,
   showButton = false,
   buttonText = "Talk to us",
+  buttonLink,
   titleMaxWidth = "100%",
   alignLeft = false,
   rightImage,
@@ -156,7 +158,7 @@ export const Hero = ({
     return (
       <>
         <style>{lottieStyles}</style>
-        <section className="relative pt-24 pb-12 lg:pt-48 lg:pb-16 overflow-x-hidden">
+        <section id="why-airdev" className="relative pt-24 pb-12 lg:pt-48 lg:pb-16 overflow-x-hidden scroll-mt-20">
         <div className="relative z-10 max-w-[1200px] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center relative">
             <div className="text-left">
@@ -164,15 +166,21 @@ export const Hero = ({
                 {title}
               </h1>
               
-              <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 lg:mb-8 leading-relaxed max-w-2xl">
+              <p className="text-base sm:text-lg lg:text-xl text-gray-600 mb-6 lg:mb-8 leading-relaxed max-w-2xl whitespace-pre-line">
                 {description}
               </p>
 
               {showButton && (
                 <div className="mt-6 lg:mt-8">
-                  <Button className="bg-[#1265EF] text-white hover:bg-[#0d4fc7] active:bg-[#0a3fa3] rounded-[6px] px-5 pb-2 pt-2.5 text-[16px] font-medium transition-all leading-none">
-                    {buttonText}
-                  </Button>
+                  {buttonLink ? (
+                    <Button asChild className="bg-[#1265EF] text-white hover:bg-[#0d4fc7] active:bg-[#0a3fa3] rounded-[6px] px-5 pt-2.5 pb-1.5 text-[16px] leading-[1.125] font-medium transition-all">
+                      <a href={buttonLink}>{buttonText}</a>
+                    </Button>
+                  ) : (
+                    <Button className="bg-[#1265EF] text-white hover:bg-[#0d4fc7] active:bg-[#0a3fa3] rounded-[6px] px-5 pt-2.5 pb-1.5 text-[16px] leading-[1.125] font-medium transition-all">
+                      {buttonText}
+                    </Button>
+                  )}
                 </div>
               )}
 
@@ -228,12 +236,12 @@ export const Hero = ({
   }
 
   return (
-    <section className="relative pt-32 pb-12 lg:pt-48 lg:pb-16 overflow-hidden">
+    <section id="why-airdev" className="relative pt-32 pb-12 lg:pt-48 lg:pb-16 overflow-hidden scroll-mt-20">
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
         <div 
           className="w-full max-w-[1500px] h-full absolute left-1/2 -translate-x-1/2 -translate-y-1/2"
           style={{ 
-            top: 'calc(40% + 20px)',
+            top: 'calc(40% + 40px)',
             backgroundImage: 'url(https://framerusercontent.com/images/qDrnphZImHJ0Ev3PBEtSsuAKiw.png?width=2160&height=736)', 
             backgroundSize: 'contain', 
             backgroundPosition: 'center', 
@@ -256,7 +264,7 @@ export const Hero = ({
               {title}
             </h1>
             
-            <p className={`text-xl text-gray-600 mb-8 leading-relaxed max-w-3xl ${centerText ? 'mx-auto' : ''}`}>
+            <p className={`text-xl text-gray-600 mb-8 leading-relaxed max-w-2xl whitespace-pre-line ${centerText ? 'mx-auto' : ''}`}>
               {description}
             </p>
 
@@ -278,9 +286,15 @@ export const Hero = ({
 
             {showButton && (
               <div className="mt-8">
-                <Button className="bg-[#1265EF] text-white hover:bg-[#0d4fc7] active:bg-[#0a3fa3] rounded-[6px] px-5 pb-2 pt-2.5 text-[16px] font-medium transition-all leading-none">
-                  {buttonText}
-                </Button>
+                {buttonLink ? (
+                  <Button asChild className="bg-[#1265EF] text-white hover:bg-[#0d4fc7] active:bg-[#0a3fa3] rounded-[6px] px-5 pt-2.5 pb-1.5 text-[16px] leading-[1.125] font-medium transition-all">
+                    <a href={buttonLink}>{buttonText}</a>
+                  </Button>
+                ) : (
+                  <Button className="bg-[#1265EF] text-white hover:bg-[#0d4fc7] active:bg-[#0a3fa3] rounded-[6px] px-5 pt-2.5 pb-1.5 text-[16px] leading-[1.125] font-medium transition-all">
+                    {buttonText}
+                  </Button>
+                )}
               </div>
             )}
           </div>

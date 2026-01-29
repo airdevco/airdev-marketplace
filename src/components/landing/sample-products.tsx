@@ -24,6 +24,7 @@ export interface Product {
   id: string;
   name: string;
   subtitle?: string;
+  tabLabel?: string;
   description: string;
   icon: React.ComponentType<{ className?: string }>;
   color: string;
@@ -232,7 +233,7 @@ export const SampleProducts = ({
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-0 lg:gap-24">
+        <div className="grid lg:grid-cols-12 gap-0 lg:gap-12">
           {/* Mobile: Horizontal Tabs, Desktop: Vertical Selector */}
           <div className="lg:col-span-3">
             {/* Mobile: Horizontal Tabs */}
@@ -247,20 +248,20 @@ export const SampleProducts = ({
                     display: none;
                   }
                 `}</style>
-                <div className="flex border-b border-slate-200 min-w-max mobile-tabs-scroll gap-8">
+                <div className="flex border-b border-slate-200 min-w-max mobile-tabs-scroll gap-4">
                   {products.map((product) => (
                     <button
                       key={product.id}
                       ref={(el) => { tabRefs.current[product.id] = el; }}
                       onClick={() => handleTabClick(product.id)}
-                      className={`pb-2.5 pt-2 text-[16px] transition-colors duration-200 whitespace-nowrap relative inline-block ${
+                      className={`pb-2.5 pt-2 px-10 text-[16px] transition-colors duration-200 whitespace-nowrap relative inline-block min-w-[180px] text-center ${
                         selectedProduct === product.id
                           ? "text-[#1265EF] font-medium"
                           : "text-gray-600 hover:text-gray-900 font-normal"
                       }`}
                     >
                       <span className="leading-tight">
-                        {product.name}
+                        {product.tabLabel || product.name}
                       </span>
                       {selectedProduct === product.id && (
                         <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1265EF]" />
@@ -277,14 +278,14 @@ export const SampleProducts = ({
                 <button
                   key={product.id}
                   onClick={() => setSelectedProduct(product.id)}
-                  className={`w-full text-left py-3 px-4 rounded-lg transition-all duration-200 text-[16px] ${
+                  className={`w-full text-left py-3 px-6 rounded-lg transition-all duration-200 text-[16px] ${
                     selectedProduct === product.id
                       ? "bg-[#1265EF]/10 text-[#1265EF] font-medium"
                       : "text-gray-600 hover:text-gray-900 font-normal hover:bg-gray-50"
                   }`}
                 >
                   <span className="leading-tight block">
-                    {product.name}
+                    {product.tabLabel || product.name}
                   </span>
                 </button>
               ))}

@@ -24,3 +24,5 @@ export { FintechValueProps } from "./fintech-value-props";
 export { FINTECH_PRODUCTS } from "./fintech-products";
 export { OurRoles } from "./our-roles";
 export { NoCodeSpeed } from "./no-code-speed";
+export { ScreenshotShowcase } from "./screenshot-showcase";
+export { ComparisonTable } from "./comparison-table";

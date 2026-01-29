@@ -114,7 +114,7 @@ export const CaseStudies = ({ label, description, slides }: CaseStudiesProps = {
   const direction = activeIndex > prevIndex ? 1 : activeIndex < prevIndex ? -1 : 1;
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
+    <section id="case-studies" className="relative py-24 bg-white overflow-hidden scroll-mt-20">
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         {/* Top Content */}

@@ -18,7 +18,7 @@ export const SaasCTA = ({
   const isLight = variant === "light";
   
   return (
-    <section className={`relative isolate overflow-hidden ${isLight ? "bg-[#f6f9fc]" : "bg-[#0A2540]"} py-20`}>
+    <section id="talk-to-us" className={`relative isolate overflow-hidden ${isLight ? "bg-[#f6f9fc]" : "bg-[#0A2540]"} py-20 scroll-mt-20`}>
       {/* Glow effect from the snippet */}
       {isLight ? (
         <div className="absolute -top-1/3 left-1/2 -z-20 h-[200px] w-[400px] -translate-x-1/2 scale-[2] rounded-[50%] bg-gradient-to-r from-[#1265EF]/60 to-[#0AE4E3]/60 blur-3xl pointer-events-none" />
