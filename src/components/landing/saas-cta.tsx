@@ -37,7 +37,7 @@ export const SaasCTA = ({
 
       <div className="relative z-10 max-w-[1200px] mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className={`text-4xl lg:text-5xl font-semibold tracking-tight ${isLight ? "text-gray-900" : "text-white"}`} style={{ marginBottom: '6px' }}>
+          <h2 id="talk-to-us-heading" className={`scroll-mt-20 text-4xl lg:text-5xl font-semibold tracking-tight ${isLight ? "text-gray-900" : "text-white"}`} style={{ marginBottom: '6px' }}>
             {title}
           </h2>
           <p className={`text-xl ${isLight ? "text-gray-700" : "text-white"} leading-relaxed mb-4`}>

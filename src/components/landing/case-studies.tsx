@@ -107,7 +107,7 @@ export const CaseStudies = ({ label, description, slides }: CaseStudiesProps = {
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         {/* Top Content */}
         <div className="max-w-3xl mb-8">
-          <h3 className="text-[#1e3a8a] font-semibold tracking-wide uppercase text-sm mb-3">
+          <h3 id="case-studies-heading" className="scroll-mt-20 text-[#1e3a8a] font-semibold tracking-wide uppercase text-sm mb-3">
             {label || "CASE STUDIES"}
           </h3>
           <h2 className="text-4xl lg:text-5xl font-semibold tracking-[-0.02em] text-[#1a1a1a] mb-6">

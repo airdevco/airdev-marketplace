@@ -67,7 +67,7 @@ export const ComparisonTable = () => {
       <div className="relative z-10 max-w-[1200px] mx-auto px-6">
         {/* Header */}
         <div className="max-w-3xl mx-auto mb-8 text-center">
-          <h3 className="text-[#1e3a8a] font-semibold tracking-wide uppercase text-sm mb-3">
+          <h3 id="why-airdev-heading" className="scroll-mt-20 text-[#1e3a8a] font-semibold tracking-wide uppercase text-sm mb-3">
             Why Airdev
           </h3>
           <h2 className="text-4xl lg:text-5xl font-semibold tracking-[-0.02em] text-[#1a1a1a] mb-6">

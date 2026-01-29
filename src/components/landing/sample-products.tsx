@@ -216,7 +216,7 @@ export const SampleProducts = ({
     <section id="marketplace-types" className={sectionClassName} style={sectionStyle}>
       <div className="max-w-[1200px] mx-auto px-6">
         <div className="text-left max-w-[900px] mb-16">
-          <span className="text-[15px] font-semibold text-[#1e3a8a] uppercase tracking-wider mb-3 block">
+          <span id="marketplace-types-heading" className="scroll-mt-20 text-[15px] font-semibold text-[#1e3a8a] uppercase tracking-wider mb-3 block">
             {label}
           </span>
           <h2 

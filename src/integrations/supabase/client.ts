@@ -2,8 +2,8 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-const SUPABASE_URL = "https://tsrtiatteejgwuafavci.supabase.co";
-const SUPABASE_PUBLISHABLE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Impqb2V2eXhheWppZmd5Y3BoeGR2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY4MDcyNDcsImV4cCI6MjA3MjM4MzI0N30.KS2FypK3kuF3PEqMnx0tOu-oYHMGKFml_hNhHCX3m8g";
+const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL ?? '';
+const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY ?? '';
 
 // Use localStorage only in the browser (avoids "localStorage is not defined" during Next.js build / Vercel deploy)
 const isBrowser = typeof window !== "undefined";

@@ -7,7 +7,7 @@ interface SEOProps {
 }
 
 const DEFAULT_SEO = {
-  title: "Launch your custom marketplace | Airdev",
+  title: "Airdev | The smarter way to launch your marketplace",
   description: "We use the latest AI & no-code technology to help people launch fully custom marketplace in a fraction of time and cost of traditional developers",
   ogImage: "https://cdn.prod.website-files.com/62aa5d914f4516fb36155657/67d0d0f96ca8cee3b7cede0d_airdev%20ogimage.jpg",
 };
