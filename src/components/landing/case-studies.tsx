@@ -4,54 +4,6 @@ import { motion, AnimatePresence } from "framer-motion";
 // --- Default Data (for SaasProducts) ---
 const DEFAULT_SLIDES = [
   {
-    id: "dividend",
-    company: "Dividend Finance",
-    logo: "https://e47b698e59208764aee00d1d8e14313c.cdn.bubble.io/f1766447523324x536489976697318800/dividend.png",
-    logoText: "$300m+ raised",
-    heading: "How we built a FinTech platform for Dividend Finance that scaled to process billions of dollars of loan",
-    description: "",
-    image: "https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=2940&auto=format&fit=crop",
-    imageTitle: "How we built a FinTech platform for Dividend Finance that scaled to process billions of dollars of loan",
-    customFields: [
-      { label: "Business type", value: "Enterprise", color: "#635bff" },
-      { label: "Product type", value: "FinTech MVP", color: "#00d4ff" },
-      { label: "Timeline", value: "6 weeks", color: "#a960ee" },
-      { label: "Key results", value: "Billions of dollars of loans processed", color: "#ff6b6b" },
-    ]
-  },
-  {
-    id: "bubble",
-    company: "Bubble.io",
-    logo: "https://e47b698e59208764aee00d1d8e14313c.cdn.bubble.io/f1766446287440x908698787583342700/bubble.io.png",
-    logoText: "",
-    heading: "How no-code leader Bubble turned to Airdev for a custom rebuild of their Developer Certification Platform... built on Bubble",
-    description: "",
-    image: "https://cdn.prod.website-files.com/62aa5d914f45160a7f155660/665f5ab8b085585d4543d3ea_Certification---In-line-5.png",
-    imageTitle: "How no-code leader Bubble turned to Airdev for a custom rebuild of their Developer Certification Platform... built on Bubble",
-    customFields: [
-      { label: "Business type", value: "SMB", color: "#635bff" },
-      { label: "Product type", value: "Exam platform", color: "#00d4ff" },
-      { label: "Timeline", value: "3 months", color: "#a960ee" },
-      { label: "Key results", value: "A more performant, reliable, and flexible exam for users and internal developers", color: "#ff6b6b" },
-    ]
-  },
-  {
-    id: "playground",
-    company: "Playground IEP",
-    logo: "https://e47b698e59208764aee00d1d8e14313c.cdn.bubble.io/f1766447131162x922542988700125000/playground.png",
-    logoText: "",
-    heading: "How Airdev helped Playground IEP create a special education caseload management tool for schools",
-    description: "",
-    image: "https://cdn.prod.website-files.com/62aa5d914f45160a7f155660/63b8851d340bdc19030b55b3_adam-winger-7fF0iei80AQ-unsplash%205-p-3200.jpg",
-    imageTitle: "How Airdev helped Playground IEP create a special education caseload management tool for schools",
-    customFields: [
-      { label: "Business type", value: "Startup", color: "#635bff" },
-      { label: "Product type", value: "Internal management portal", color: "#00d4ff" },
-      { label: "Timeline", value: "3 months", color: "#a960ee" },
-      { label: "Key results", value: "5 pilot schools signed up in <1 year", color: "#ff6b6b" },
-    ]
-  },
-  {
     id: "ticketrev",
     company: "TicketRev",
     logo: "https://cdn.prod.website-files.com/64e8a789efa42eaf8fe4d068/64e8b49e181622332d021cee_Logo.svg",
@@ -60,13 +12,48 @@ const DEFAULT_SLIDES = [
     description: "",
     image: "https://cdn.prod.website-files.com/62aa5d914f45160a7f155660/64cc2c786d693702395f21b1_TicketRev-built-with-no-code-Airdev.jpg",
     imageTitle: "How a buyer-first ticket marketplace startup quickly secured $1.1M in funding with Bubble.io",
+    url: "https://www.airdev.co/case-studies/ticketrev-marketplace-startup-bubble",
     customFields: [
       { label: "Business type", value: "Startup", color: "#635bff" },
       { label: "Product type", value: "Marketplace app", color: "#00d4ff" },
       { label: "Timeline", value: "2 months", color: "#a960ee" },
       { label: "Key results", value: "$1.1M in pre-seed funding raised in 2 years", color: "#ff6b6b" },
     ]
-  }
+  },
+  {
+    id: "consenna",
+    company: "Consenna",
+    logo: "https://cdn.prod.website-files.com/62aa5d914f4516fb36155657/669a98f0f9d898fd7a42ee37_hp.webp",
+    logoText: "",
+    heading: "How Airdev helped the consultancy Consenna build a custom no-code marketplace for HP for Education to serve 30k schools across the UK",
+    description: "",
+    image: "https://cdn.prod.website-files.com/62aa5d914f45160a7f155660/635076a5905dd76065955f2c_hp-s%20(1).png",
+    imageTitle: "How Airdev helped the consultancy Consenna build a custom no-code marketplace for HP for Education to serve 30k schools across the UK",
+    url: "https://www.airdev.co/case-studies/consenna-hp-for-education-marketplace-no-code",
+    customFields: [
+      { label: "Business type", value: "Enterprise", color: "#635bff" },
+      { label: "Product type", value: "Custom marketplace", color: "#00d4ff" },
+      { label: "Timeline", value: "3 months", color: "#a960ee" },
+      { label: "Key results", value: "30k schools served", color: "#ff6b6b" },
+    ]
+  },
+  {
+    id: "kidsbook",
+    company: "Kidsbook",
+    logo: "https://e47b698e59208764aee00d1d8e14313c.cdn.bubble.io/f1768940559825x362227103494313200/kidsbook.png",
+    logoText: "",
+    heading: "How Airdev helped Kidsbook build a custom no-code marketplace in just 6 weeks to connect parents with kids activity providers",
+    description: "",
+    image: "https://cdn.prod.website-files.com/62aa5d914f45160a7f155660/635075037ab429484ab21afb_kidsbook%20(2).png",
+    imageTitle: "How Airdev helped Kidsbook build a custom no-code marketplace in just 6 weeks to connect parents with kids activity providers",
+    url: "https://www.airdev.co/case-studies/kidsbook-marketplace-app",
+    customFields: [
+      { label: "Business type", value: "Startup", color: "#635bff" },
+      { label: "Product type", value: "2-sided marketplace", color: "#00d4ff" },
+      { label: "Timeline", value: "6 weeks", color: "#a960ee" },
+      { label: "Key results", value: "1000+ providers signed up", color: "#ff6b6b" },
+    ]
+  },
 ];
 
 
@@ -81,6 +68,7 @@ interface Slide {
   description: string;
   image: string;
   imageTitle: string;
+  url?: string;
   customFields: Array<{ label: string; value: string; color: string }>;
 }
 
@@ -120,13 +108,13 @@ export const CaseStudies = ({ label, description, slides }: CaseStudiesProps = {
         {/* Top Content */}
         <div className="max-w-3xl mb-8">
           <h3 className="text-[#1e3a8a] font-semibold tracking-wide uppercase text-sm mb-3">
-            {label || "OUR CLIENTS"}
+            {label || "CASE STUDIES"}
           </h3>
           <h2 className="text-4xl lg:text-5xl font-semibold tracking-[-0.02em] text-[#1a1a1a] mb-6">
             Built to scale
           </h2>
           <p className="text-[20px] text-[#425466] leading-relaxed mb-2 max-w-2xl">
-            {description || "From MVPs that raised millions to enterprise platforms processing billions in transactions. See how we've helped companies at every stage launch faster and grow bigger."}
+            {description || "From MVPs that raised millions to enterprise platforms serving thousands of users."}
           </p>
         </div>
 
@@ -227,25 +215,54 @@ export const CaseStudies = ({ label, description, slides }: CaseStudiesProps = {
                   transition={{ duration: 0.25, ease: "easeOut" }}
                   className="absolute inset-0 w-full h-full"
                 >
-                  <div className="w-full h-full relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300">
-                    <img 
-                      src={activeSlide.image}
-                      alt={activeSlide.company}
-                      className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                    />
-                    {/* Strong Blue Tint Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#176AAF] via-[#176AAF]/90 to-[#176AAF]/50 mix-blend-color opacity-100" />
-                    {/* Darker gradient at bottom for text readability */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#176AAF]/90 via-[#176AAF]/40 to-transparent" />
-                    {/* Title Overlay */}
-                    {activeSlide.imageTitle && (
-                      <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
-                        <h3 className="text-white text-[20px] lg:text-[24px] font-semibold leading-tight">
-                          {activeSlide.imageTitle}
-                        </h3>
+                  {activeSlide.url ? (
+                    <a 
+                      href={activeSlide.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block w-full h-full"
+                    >
+                      <div className="w-full h-full relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300">
+                        <img 
+                          src={activeSlide.image}
+                          alt={activeSlide.company}
+                          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        {/* Strong Blue Tint Gradient Overlay */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#176AAF] via-[#176AAF]/90 to-[#176AAF]/50 mix-blend-color opacity-100" />
+                        {/* Darker gradient at bottom for text readability */}
+                        <div className="absolute inset-0 bg-gradient-to-t from-[#176AAF]/90 via-[#176AAF]/40 to-transparent" />
+                        {/* Title Overlay */}
+                        {activeSlide.imageTitle && (
+                          <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                            <h3 className="text-white text-[20px] lg:text-[24px] font-semibold leading-tight">
+                              {activeSlide.imageTitle}
+                            </h3>
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </div>
+                    </a>
+                  ) : (
+                    <div className="w-full h-full relative group rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-xl transition-all duration-300">
+                      <img 
+                        src={activeSlide.image}
+                        alt={activeSlide.company}
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                      />
+                      {/* Strong Blue Tint Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#176AAF] via-[#176AAF]/90 to-[#176AAF]/50 mix-blend-color opacity-100" />
+                      {/* Darker gradient at bottom for text readability */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#176AAF]/90 via-[#176AAF]/40 to-transparent" />
+                      {/* Title Overlay */}
+                      {activeSlide.imageTitle && (
+                        <div className="absolute bottom-0 left-0 right-0 p-6 z-10">
+                          <h3 className="text-white text-[20px] lg:text-[24px] font-semibold leading-tight">
+                            {activeSlide.imageTitle}
+                          </h3>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </motion.div>
               </AnimatePresence>
             </div>

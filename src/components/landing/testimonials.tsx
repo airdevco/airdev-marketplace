@@ -49,22 +49,22 @@ const DEFAULT_TESTIMONIALS = [
       image: "https://cdn.prod.website-files.com/62aa5d914f4516fb36155657/650af0adf55118f1835773b3_Matt%20Conger_Cadence.png"
     },
     {
-      quote: "Working with AirDev was an entirely different experience from typical outsourced developers; it was like having another member of the team. Their ability to translate broad guidance and run with ideas saved me and our team 40+ hours per week.",
-      name: "Richard Sherrington",
-      role: "Engagement Manager, McKinsey & Company",
-      image: "https://cdn.prod.website-files.com/62aa5d914f4516fb36155657/650af0ad1fd3a8d78150fe34_Richard%20Sherrington_Mckinsey.png"
+      quote: "Having partnered with Airdev on previous projects both for HP and other leading technology companies, it was clear that they were best placed to deliver this sort of complex tool.",
+      name: "Douglas Jeffrey",
+      role: "Chairman, Consenna",
+      image: "https://e47b698e59208764aee00d1d8e14313c.cdn.bubble.io/f1769649615149x141931295924834000/doug.png"
     },
     {
       quote: "As non-technical, female founders of a mission-driven organization, we got a lot of feedback that our idea was nice but we needed to get a technical co-founder on board to be taken seriously. What Airdev has been able to accomplish in just a week is totally astounding and fits our needs perfectly.",
       name: "Madeline Dangerfield-Cha",
       role: "Co-founder, Mon Ami",
-      image: "https://cdn.prod.website-files.com/62aa5d914f4516fb36155657/650d96fd849248da2ffc5596_Madeline.png"
+      image: "https://e47b698e59208764aee00d1d8e14313c.cdn.bubble.io/f1769649664056x972078318383549700/mad.png"
     },
     {
-      quote: "Having partnered with Airdev on previous projects both for HP and other leading technology companies, it was clear that they were best placed to deliver this sort of complex tool.",
-      name: "Douglas Jeffrey",
-      role: "Chairman, Consenna",
-      image: "https://cdn.prod.website-files.com/62aa5d914f4516fb36155657/6500afb08c847142b80af69f_douglas.png"
+      quote: "Working with AirDev was an entirely different experience from typical outsourced developers; it was like having another member of the team. Their ability to translate broad guidance and run with ideas saved me and our team 40+ hours per week.",
+      name: "Richard Sherrington",
+      role: "Engagement Manager, McKinsey & Company",
+      image: "https://cdn.prod.website-files.com/62aa5d914f4516fb36155657/650af0ad1fd3a8d78150fe34_Richard%20Sherrington_Mckinsey.png"
     },
     {
       quote: "We've spent the same amount on consultants implementing our off-the-shelf system as we've spent building something totally custom with Airdev.",
@@ -75,11 +75,11 @@ const DEFAULT_TESTIMONIALS = [
 ];
 
 export const Testimonials = ({
-  label = "WHAT CLIENTS SAY",
+  label = "TESTIMONIALS",
   title = "Clients trust Airdev to launch and scale",
-  description = "Hear from the founders and teams we've worked with.",
+  description = "",
   testimonials = DEFAULT_TESTIMONIALS,
-  linkText = "More client stories",
+  linkText = "",
   linkUrl = "/client-stories",
   backgroundColor = "white"
 }: TestimonialsProps = {}) => {
@@ -94,9 +94,11 @@ export const Testimonials = ({
           <h2 className="text-4xl lg:text-5xl font-semibold tracking-tight text-gray-900 mb-6 max-w-2xl mx-auto">
             {title}
           </h2>
-          <p className="text-xl text-gray-600 leading-relaxed">
-            {description}
-          </p>
+          {description && (
+            <p className="text-xl text-gray-600 leading-relaxed">
+              {description}
+            </p>
+          )}
         </div>
 
         {/* Testimonials Masonry Grid */}
@@ -105,7 +107,7 @@ export const Testimonials = ({
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-2xl p-8 border border-gray-100/50 shadow-[0_2px_4px_rgba(0,0,0,0.02),0_8px_16px_rgba(0,0,0,0.04)] flex flex-col break-inside-avoid"
+                className="bg-white rounded-2xl p-8 border border-gray-200 shadow-[0_2px_4px_rgba(0,0,0,0.02),0_8px_16px_rgba(0,0,0,0.04)] flex flex-col break-inside-avoid"
               >
                 <blockquote className="text-[16px] text-[#0A0A0A] leading-relaxed mb-6 font-normal">
                   "{testimonial.quote}"

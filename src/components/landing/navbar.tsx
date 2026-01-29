@@ -7,7 +7,7 @@ const NAV_LINKS = [
   { label: "Why Airdev", href: "#why-airdev-comparison" },
   { label: "Marketplace Types", href: "#marketplace-types" },
   { label: "Case Studies", href: "#case-studies" },
-  { label: "Pricing", href: "#pricing" },
+  { label: "Pricing", href: "#pricing-section" },
   { label: "Talk to Us", href: "#talk-to-us" },
 ] as const;
 
@@ -64,7 +64,7 @@ export const Navbar = () => {
           </div>
 
           <div className="hidden lg:block flex-shrink-0">
-            <a href="#talk-to-us">
+            <a href="#talk-to-us" onClick={(e) => handleSmoothScroll(e, "#talk-to-us")}>
               <Button className="bg-[#1265EF] text-white hover:bg-[#0d4fc7] active:bg-[#0a3fa3] rounded-[6px] px-5 pt-2.5 pb-1.5 text-[16px] leading-[1.125] font-medium transition-all">
                 Talk to Us
               </Button>
@@ -96,7 +96,7 @@ export const Navbar = () => {
               {label}
             </a>
           ))}
-          <a href="#talk-to-us" onClick={closeMobileMenu} className="mt-2">
+          <a href="#talk-to-us" onClick={(e) => { handleSmoothScroll(e, "#talk-to-us"); closeMobileMenu(); }} className="mt-2">
             <Button className="w-full bg-[#1265EF] text-white hover:bg-[#0d4fc7] active:bg-[#0a3fa3] rounded-[6px] px-5 pt-2.5 pb-1.5 text-[16px] leading-[1.125] font-medium transition-all">
               Talk to Us
             </Button>

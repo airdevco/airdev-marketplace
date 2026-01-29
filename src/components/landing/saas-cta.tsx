@@ -9,7 +9,7 @@ interface SaasCTAProps {
 }
 
 export const SaasCTA = ({
-  title = "Have a project in mind?",
+  title = "Have a marketplace in mind?",
   description = "We're happy to talk through it, even if you're just exploring.",
   buttonText = "Talk to us",
   buttonLink = "#",

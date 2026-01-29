@@ -26,3 +26,4 @@ export { OurRoles } from "./our-roles";
 export { NoCodeSpeed } from "./no-code-speed";
 export { ScreenshotShowcase } from "./screenshot-showcase";
 export { ComparisonTable } from "./comparison-table";
+export { Pricing } from "./pricing";

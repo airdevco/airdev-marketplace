@@ -13,6 +13,7 @@ import {
   BusinessTypes,
   ComparisonTable,
   SampleProducts,
+  Pricing,
 } from "@/components/landing";
 import type { Product } from "@/components/landing/sample-products";
 import {
@@ -189,10 +190,9 @@ const Index = () => {
             bgColor="bg-white"
           />
           <CaseStudies />
-          <BusinessTypes />
-          <section id="pricing" className="scroll-mt-20">
-            <Stats />
-          </section>
+          <Pricing />
+          {/* <BusinessTypes /> */}
+          {/* <Stats /> */}
           <Testimonials />
           <SaasCTA />
         </main>

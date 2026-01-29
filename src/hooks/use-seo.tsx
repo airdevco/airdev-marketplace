@@ -7,8 +7,8 @@ interface SEOProps {
 }
 
 const DEFAULT_SEO = {
-  title: "Airdev | The leading no-code and Bubble app development agency",
-  description: "Airdev is the leader in no-code & Bubble app development. We help businesses launch software products in a fraction of the time & cost of traditional developers.",
+  title: "Launch your custom marketplace | Airdev",
+  description: "We use the latest AI & no-code technology to help people launch fully custom marketplace in a fraction of time and cost of traditional developers",
   ogImage: "https://cdn.prod.website-files.com/62aa5d914f4516fb36155657/67d0d0f96ca8cee3b7cede0d_airdev%20ogimage.jpg",
 };
 
