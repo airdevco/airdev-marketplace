@@ -3,13 +3,23 @@ import { Menu, X } from "lucide-react";
 import { useState, useEffect, MouseEvent } from "react";
 import { ROUTES } from "@/config/routes";
 
-const NAV_LINKS = [
+const DEFAULT_NAV_LINKS = [
   { label: "Why Airdev", href: "#why-airdev-heading" },
   { label: "Marketplace Types", href: "#marketplace-types-heading" },
   { label: "Case Studies", href: "#case-studies-heading" },
   { label: "Pricing", href: "#pricing-heading" },
   { label: "Talk to Us", href: "#talk-to-us-heading" },
 ] as const;
+
+export interface NavLinkItem {
+  label: string;
+  href: string;
+}
+
+interface NavbarProps {
+  /** Override nav links (e.g. for Saas page: "Common Features" instead of "Marketplace Types"). */
+  links?: NavLinkItem[];
+}
 
 const handleSmoothScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
   e.preventDefault();
@@ -22,7 +32,8 @@ const handleSmoothScroll = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
 const linkClass = () =>
   `text-[16px] font-medium transition-colors text-gray-600 hover:text-black`;
 
-export const Navbar = () => {
+export const Navbar = ({ links }: NavbarProps = {}) => {
+  const navLinks = links ?? DEFAULT_NAV_LINKS;
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -51,7 +62,7 @@ export const Navbar = () => {
           </a>
 
           <div className="hidden lg:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
-            {NAV_LINKS.slice(0, -1).map(({ label, href }) => (
+            {navLinks.slice(0, -1).map(({ label, href }) => (
               <a 
                 key={href} 
                 href={href} 
@@ -83,7 +94,7 @@ export const Navbar = () => {
 
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-white border-b border-gray-200 p-6 lg:hidden flex flex-col gap-1 shadow-xl max-h-[calc(100vh-80px)] overflow-y-auto">
-          {NAV_LINKS.slice(0, -1).map(({ label, href }) => (
+          {navLinks.slice(0, -1).map(({ label, href }) => (
             <a
               key={href}
               href={href}

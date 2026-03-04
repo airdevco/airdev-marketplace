@@ -10,6 +10,7 @@ import { SettingsDialog } from "@/components/settings-dialog";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { useEffect, useState } from "react";
 import Index from "./views/Index";
+import Saas from "./views/Saas";
 import BubbleAppAudit from "./views/BubbleAppAudit";
 import { ROUTES } from "@/config/routes";
 import Partners from "./views/Partners";
@@ -90,6 +91,7 @@ const AppContent = () => {
     <>
       <Routes>
         <Route path={ROUTES.HOME} element={<Index />} />
+        <Route path={ROUTES.SAAS} element={<Saas />} />
         <Route path={ROUTES.BUBBLE_APP_AUDIT} element={<BubbleAppAudit />} />
         <Route path={ROUTES.CLIENT_STORIES} element={<ClientStories />} />
         <Route path={ROUTES.SAAS_PRODUCTS} element={<SaasProducts />} />

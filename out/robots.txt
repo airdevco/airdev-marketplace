@@ -1,14 +1,25 @@
+# Only the index page (/) should be crawled and indexed.
+# All other paths are disallowed.
+
 User-agent: Googlebot
-Allow: /
+Allow: /$
+Disallow: /
 
 User-agent: Bingbot
-Allow: /
+Allow: /$
+Disallow: /
 
 User-agent: Twitterbot
-Allow: /
+Allow: /$
+Disallow: /
 
 User-agent: facebookexternalhit
-Allow: /
+Allow: /$
+Disallow: /
 
 User-agent: *
-Allow: /
+Allow: /$
+Disallow: /
+
+# Sitemap contains only the index URL
+Sitemap: https://marketplaces.airdev.co/sitemap.xml

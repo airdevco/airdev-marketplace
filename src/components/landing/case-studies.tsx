@@ -158,6 +158,7 @@ export const CaseStudies = ({ label, description, slides }: CaseStudiesProps = {
                       className={`h-full w-auto object-contain transition-all duration-300 
                         ${slide.id === 'dividend' ? 'max-h-5' : ''} 
                         ${slide.id === 'bubble' ? (slide.company === 'Tributi' ? 'max-h-5 mt-1' : 'max-h-6') : ''} 
+                        ${slide.id === 'tributi' ? 'max-h-5 mt-1' : ''}
                         ${slide.id === 'playground' ? (slide.company === 'My NFT Alerts' ? '' : 'mix-blend-multiply') : ''}
                         ${slide.id === 'ticketrev' ? 'max-h-6' : ''}
                         ${slide.id === 'kidsbook' ? 'max-h-9' : ''}

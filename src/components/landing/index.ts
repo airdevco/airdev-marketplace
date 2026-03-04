@@ -27,3 +27,5 @@ export { NoCodeSpeed } from "./no-code-speed";
 export { ScreenshotShowcase } from "./screenshot-showcase";
 export { ComparisonTable } from "./comparison-table";
 export { Pricing } from "./pricing";
+export { MarketingPageLayout } from "./marketing-page-layout";
+export type { MarketingPageLayoutOverrides, MarketingPageLayoutProps } from "./marketing-page-layout";

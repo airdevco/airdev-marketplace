@@ -235,12 +235,12 @@ export const SampleProducts = ({
 
         <div className="grid lg:grid-cols-12 gap-0 lg:gap-12">
           {/* Mobile: Horizontal Tabs, Desktop: Vertical Selector */}
-          <div className="lg:col-span-3">
+          <div className="min-w-0 lg:col-span-3">
             {/* Mobile: Horizontal Tabs */}
-            <div className="lg:hidden mb-4 w-full max-w-[calc(100vw-3rem)]">
-              <div 
+            <div className="lg:hidden mb-4 w-full -mx-6 min-w-0">
+              <div
                 ref={scrollContainerRef}
-                className="overflow-x-auto w-full pb-2" 
+                className="overflow-x-auto min-w-0 w-full"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
               >
                 <style>{`
@@ -248,24 +248,24 @@ export const SampleProducts = ({
                     display: none;
                   }
                 `}</style>
-                <div className="flex border-b border-slate-200 min-w-max mobile-tabs-scroll gap-4">
+                <div className="flex border-b border-slate-200 min-w-max mobile-tabs-scroll gap-4 pl-6 pr-6">
                   {products.map((product) => (
                     <button
                       key={product.id}
                       ref={(el) => { tabRefs.current[product.id] = el; }}
                       onClick={() => handleTabClick(product.id)}
-                      className={`pb-2.5 pt-2 px-10 text-[16px] transition-colors duration-200 whitespace-nowrap relative inline-block min-w-[180px] text-center ${
+                      className={`flex flex-col items-center justify-end pt-2 pb-0 px-4 text-[16px] transition-colors duration-200 whitespace-nowrap relative inline-block text-center ${
                         selectedProduct === product.id
                           ? "text-[#1265EF] font-medium"
                           : "text-gray-600 hover:text-gray-900 font-normal"
                       }`}
                     >
-                      <span className="leading-tight">
+                      <span className="relative inline-block pb-1.5">
                         {product.tabLabel || product.name}
+                        {selectedProduct === product.id && (
+                          <span className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1265EF]" />
+                        )}
                       </span>
-                      {selectedProduct === product.id && (
-                        <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-[#1265EF]" />
-                      )}
                     </button>
                   ))}
                 </div>
@@ -329,12 +329,12 @@ export const SampleProducts = ({
                         {currentProduct.features.map((feature, index) => (
                           <div
                             key={index}
-                            className="flex items-start gap-4"
+                            className="flex items-center gap-4"
                           >
-                            <div className="flex-shrink-0 w-7 h-7 rounded-full bg-[#88ADD2]/10 flex items-center justify-center text-[#88ADD2] mt-0.5">
+                            <div className="flex-shrink-0 w-7 h-7 rounded-full bg-[#88ADD2]/10 flex items-center justify-center text-[#88ADD2]">
                                <feature.icon className="w-4 h-4" />
                             </div>
-                            <span className="text-[18px] text-gray-700 pt-0.5">
+                            <span className="text-[18px] text-gray-700 block pt-[5px]">
                               {feature.name}
                             </span>
                           </div>
