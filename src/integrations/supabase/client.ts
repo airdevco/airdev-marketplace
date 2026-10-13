@@ -2,8 +2,15 @@
 import { createClient } from '@supabase/supabase-js';
 import type { Database } from './types';
 
-const SUPABASE_URL = import.meta.env.VITE_SUPABASE_URL ?? '';
-const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY ?? '';
+// Vite exposes these on import.meta.env. Next.js leaves import.meta.env undefined
+// and instead inlines `process.env.VITE_*` at build time (forwarded by `env` in
+// next.config.mjs), so those references must stay written out literally.
+const viteEnv = import.meta.env as ImportMetaEnv | undefined;
+const hasProcess = typeof process !== 'undefined';
+const SUPABASE_URL =
+  viteEnv?.VITE_SUPABASE_URL ?? (hasProcess ? process.env.VITE_SUPABASE_URL : undefined) ?? '';
+const SUPABASE_PUBLISHABLE_KEY =
+  viteEnv?.VITE_SUPABASE_ANON_KEY ?? (hasProcess ? process.env.VITE_SUPABASE_ANON_KEY : undefined) ?? '';
 
 // Use localStorage only in the browser (avoids "localStorage is not defined" during Next.js build / Vercel deploy)
 const isBrowser = typeof window !== "undefined";
